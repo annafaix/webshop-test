@@ -5,8 +5,7 @@ let tableReducer = (state={past:[], present:[], future:[]}, action) => {
 	switch( action.type ) {
 		case ADD_TABLE:
 		return {
-				past: [
-					...state.past,state.present],
+				past: [...state.past,state.present],
 				present: [...state.present, action.furniture],
 				future: []
 			};
@@ -16,6 +15,6 @@ let tableReducer = (state={past:[], present:[], future:[]}, action) => {
 };
 
 let rootReducer = combineReducers({
-	produkter: tableReducer
+	produkter: tableReducer,
 });
 export default rootReducer;

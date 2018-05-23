@@ -12,7 +12,7 @@ class Form extends Component{
   }
   render(){
     return(
-      <form className="form">
+      <div className="form">
         <h3>Administrera produkter: </h3>
         <input  placeholder="Produktens namn"
                 type="text"
@@ -27,7 +27,7 @@ class Form extends Component{
                 value={this.state.inputAntal}
                 onChange={e => this.setState({inputAntal: e.target.value})}/>
         <button onClick={this.handleClickAddTable}>Lägg till listan</button>
-      </form>
+      </div>
     )
   }
   handleClickAddTable = event => {
